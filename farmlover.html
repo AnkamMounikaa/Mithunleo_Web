@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FarmLovers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1612305424474-403a79cc4383?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFybWVycyUyMG1hcmtldHN8ZW58MHx8MHx8fDA%3D') no-repeat center center/cover;
+      color: white;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-google {
+      background-color: white;
+      color: #333;
+      border: 1px solid #ccc;
+    }
+
+    .btn-green {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 8px;
+    }
+    .bg-orange {
+  background-color: #f97316; /* Orange-500 */
+}
+ul.custom-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: item;
+  }
+
+  ul.custom-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  ul.custom-list li::before {
+    content: counter(item);
+    counter-increment: item;
+    background-color: #f4f4f4;
+    color: #f97316;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://farmlovers.org/blobs/thumbnails/fee23425-7f04-4619-bd76-1fff96e0455a.png" alt="logo">
+        <strong>mithunleo<span style="color:#f97316;">.org</span></strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link fw-bold" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="#">Marketplace</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="#">Community</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="#">Dashboard</a></li>
+        </ul>
+        <form class="d-flex ms-3">
+          <input class="form-control me-2" type="search" placeholder="Type your search" />
+          <button class="btn btn-dark" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <div class="d-flex align-items-center ms-3">
+          <i class="bi bi-envelope fs-4 me-3"></i>
+          <i class="bi bi-box-arrow-in-right fs-4"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1 class="display-5 fw-bold">CONNECT YOUR FARM TO THE WORLD</h1>
+      <p class="lead">Find better buyers for your produce, from your local community to international markets.</p>
+      <h5 class="fw-bold">Join the Family Now: 3995 Farms, 4152 Buyers & 1313 Active Products</h5>
+      <div class="my-4">
+        <button class="btn btn-google px-4 py-2">
+          <img src="https://img.icons8.com/color/16/000000/google-logo.png" class="me-2"/>
+          Continue with Google
+        </button>
+        <p class="my-2 fw-bold text-white">- OR -</p>
+        <button class="btn btn-green px-4 py-2">JOIN WITH YOUR EMAIL</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Section -->
+  <section class="text-center py-5">
+    <div class="container">
+      <h2 class="fw-bold">MORE BUYERS, BETTER PRICES</h2>
+    </div>
+  </section>
+
+  <div >
+    <img style="width:95%; margin-left:35px;" src="https://farmlovers.org/img/farmlovers_infographic_1200_3.jpg" alt="">
+  </div>
+
+  <!-- Features Section -->
+<!-- Features Section (Left-Aligned & Responsive) -->
+<section class="py-5">
+    <div class="container">
+      <div class="d-flex fl justify-content-center">
+        <div class="col-lg-10">
+          <ul class="list-unstyled">
+            <!-- Feature Item -->
+            <li class="d-flex mb-4">
+              <div class="me-3">
+                <span class="badge rounded-circle text-white fw-bold bg-orange" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size:19px;">1</span>
+              </div>
+              <div>
+                <strong>More Direct Sales</strong><br />
+                <span>No middlemen, no commission</span>
+              </div>
+            </li>
+  
+            <li class="d-flex mb-4">
+              <div class="me-3">
+                <span class="badge rounded-circle text-white fw-bold bg-orange" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size:19px;">2</span>
+              </div>
+              <div>
+                <strong>Big Circle of Customers</strong><br />
+                <span>Regional restaurants, cafeterias, food stores and local families</span>
+              </div>
+            </li>
+  
+            <li class="d-flex mb-4">
+              <div class="me-3">
+                <span class="badge rounded-circle text-white fw-bold bg-orange" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size:19px;">3</span>
+              </div>
+              <div>
+                <strong>Take Pre-Orders</strong><br />
+                <span>Have people sign up for upcoming harvest or products</span>
+              </div>
+            </li>
+  
+            <li class="d-flex mb-4">
+              <div class="me-3">
+                <span class="badge rounded-circle text-white fw-bold bg-orange" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size:19px;">4</span>
+              </div>
+              <div>
+                <strong>Grow What Market Wants</strong><br />
+                <span>Find out what people want and limit waste</span>
+              </div>
+            </li>
+  
+            <li class="d-flex mb-4">
+              <div class="me-3">
+                <span class="badge rounded-circle text-white fw-bold bg-orange" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size:19px;">5</span>
+              </div>
+              <div>
+                <strong>Spend Less Time in Sales</strong><br />
+                <span>Take online orders, use the power of Farmlovers community</span>
+              </div>
+            </li>
+  
+            <li class="d-flex mb-4">
+              <div class="me-3">
+                <span class="badge rounded-circle text-white fw-bold bg-orange" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size:19px;">6</span>
+              </div>
+              <div>
+                <strong>Easy-to-Use System</strong><br />
+                <span>Add new products simple & fast</span>
+              </div>
+            </li>
+  
+            <li class="d-flex mb-4">
+              <div class="me-3">
+                <span class="badge rounded-circle text-white fw-bold bg-orange" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size:19px;">7</span>
+              </div>
+              <div>
+                <strong>Free of Charge</strong><br />
+                <span>Using platform for your main needs is free of charge (and will always be)</span>
+              </div>
+            </li>
+  
+            <li class="d-flex mb-4">
+              <div class="me-3">
+                <span class="badge rounded-circle text-white fw-bold bg-orange" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size:19px;">8</span>
+              </div>
+              <div>
+                <strong>Monthly New Tools</strong><br />
+                <span>New tools to improve farmer's sales are added monthly</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ Section -->
+<section class="py-5" style="background-color:  #dcd8d0;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="">
+          <h2 class="text-center fw-bold mb-5">FREQUENTLY ASKED QUESTIONS</h2>
+  
+          <div class="mb-4">
+            <h5 class="fw-bold">What can Farmlovers do for me?</h5>
+            <p>
+              You already have many buyers, so why join Farmlovers? First of all, you can 
+              <strong>attract new buyers</strong> who pay better and order more. But the most important thing is 
+              to talk to them and <strong>grow what they need</strong>. Wouldn't it be great if you could plan your 
+              seeding according to future market demand? When you join Farmlovers, you become part of a strong 
+              community that can help you grow and secure your future.
+            </p>
+          </div>
+  
+          <div class="mb-4">
+            <h5 class="fw-bold">Who is behind Farmloves?</h5>
+            <p>
+              An international group of agricultural experts and professionals in web technologies and marketing. 
+              They are present on three continents (North America, Europe and Asia) and their goal is to support 
+              all local farmers and their family members and secure their future by bringing their freshest and 
+              healthiest products to market.
+            </p>
+          </div>
+  
+          <div class="mb-4">
+            <h5 class="fw-bold">How much does the membership cost?</h5>
+            <p>
+              The basic package will always be <strong>free</strong>. Over time, we will offer some additional 
+              services for even greater visibility, which will be charged.
+            </p>
+          </div>
+  
+          <div>
+            <h5 class="fw-bold">What does my FREE membership include?</h5>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><span class="text-success me-2">💚</span> A social network style page for your farm</li>
+              <li class="mb-2"><span class="text-success me-2">💚</span> Adding all your products to the searchable marketplace</li>
+              <li class="mb-2"><span class="text-success me-2">💚</span> Receiving direct messages from your buyers</li>
+              <li class="mb-2"><span class="text-success me-2">💚</span> Posting photos and videos</li>
+              <li class="mb-2"><span class="text-success me-2">💚</span> Announcement of the upcoming harvest</li>
+              <li class="mb-2"><span class="text-success me-2">💚</span> Promoting your own website</li>
+              <li class="mb-2"><span class="text-success me-2">💚</span> Inviting people to your Facebook page or Instagram profile</li>
+              <li class="mb-2"><span class="text-success me-2">💚</span> Access to future features (and there will be many!)</li>
+            </ul>
+          </div>
+
+          <div class="">
+            <div class="mb-4">
+              <h5 class="fw-bold">Can I inform my buyers about the upcoming harvest?</h5>
+              <p>Of course! Announce your harvest and invite buyers to be the first to sign up!</p>
+            </div>
+    
+            <div class="mb-4">
+              <h5 class="fw-bold">Can I use Farmlovers to better plan my production?</h5>
+              <p>
+                Yes! You can avoid surpluses or poor prices by growing for the market. Are sweet potatoes preferred 
+                over regular potatoes? Is barley in particular demand? Get valuable insights into what customers 
+                in your community prefer and plan your production accordingly.
+              </p>
+            </div>
+    
+            <div class="mb-4">
+              <h5 class="fw-bold">I already have a Facebook page, an Instagram page, and a web page. Why do I need Farmlovers?</h5>
+              <p>
+                Farmlovers gathers exactly the <strong>people you need</strong> – people who are interested in your products. 
+                Through the other channels, you reach a much broader and unfocused audience. Farmlovers doesn't exclude 
+                your existing channels – it complements them.
+              </p>
+            </div>
+    
+            <div class="mb-5">
+              <h5 class="fw-bold">Have more questions?</h5>
+              <p>Ask as <a href="#" class="text-success">over here</a>.</p>
+            </div>
+    
+            <!-- Sign Up Block -->
+            <div class="bg-white rounded-4 shadow p-5 text-center">
+              <h4 class="fw-bold mb-4">SIGN UP BEFORE IT’S TOO LATE</h4>
+              <button style="border-radius: 50px;" class="btn btn-outline-secondary mb-3 d-flex align-items-center mx-auto px-4 py-2">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google icon" width="20" class="me-2">
+                Continue with Google
+              </button>
+              <div class="mb-3">– OR –</div>
+              <button style="border-radius: 50px;" class="btn btn-success px-4 py-2">EMAIL LOGIN</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section style="background-color: #dcd8d0;" class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Community Updates -->
+        <div class="col-lg-6 mb-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold mb-0">COMMUNITY UPDATES <span style="color: red;">❤️</span></h5>
+            <button class="btn btn-outline-dark rounded-pill px-3 py-1">
+              ADD <i class="bi bi-plus-lg ms-1"></i>
+            </button>
+          </div>
+  
+          <div class="card border-0 rounded-4 shadow overflow-hidden">
+            <!-- Header -->
+            <div class="p-3 d-flex align-items-center justify-content-between">
+              <span class="text-success fw-semibold">Drimaka kamadri updated a farm</span>
+              <span class="text-muted small">2025-07-17 08:04:22</span>
+            </div>
+  
+            <!-- Image -->
+            <div style="background-color: #eee;">
+              <img style="width:100%; height:300px;" src="https://farmlovers.org/img/supplier_no_photo.png" alt="Farm Image" class="img-fluid" style="opacity: 0.4;">
+            </div>
+  
+            <!-- Content -->
+            <div class="p-3">
+              <h6 class="fw-bold">Drim farm</h6>
+              <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Uganda - Central - Kampala</p>
+              <p><i class="bi bi-cart-fill me-2"></i> Watermelon</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-success btn-sm rounded-pill px-3">FULL PROFILE</button>
+                <div>
+                  <i class="bi bi-heart me-2"></i>Like
+                  <span class="ms-3"><i class="bi bi-star me-1"></i>Rate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Popular Communities -->
+        <div class="col-lg-5">
+          <h5 class="fw-bold mb-3">POPULAR COMMUNITIES</h5>
+          
+            <div class="container">
+                <ul class="custom-list">
+                  <li>Mangoes</li>
+                  <li>Gauteng</li>
+                  <li>Famous Mangoes of Maharashtra</li>
+                  <li>Maharashtra</li>
+                  <li>Limpopo</li>
+                  <li>Bangalore</li>
+                  <li>Apples</li>
+                  <li>KwaZulu-Natal</li>
+                  <li>India</li>
+                  <li>Azolla Seeds</li>
+                  <li>Corn</li>
+                  <li>Ulavapadu Mangoes</li>
+                  <li>Eggs</li>
+                  <li>Kenya</li>
+                  <li>Abuja</li>
+                  <li>Johannesburg</li>
+                </ul>
+        </div>
+      </div>
+
+      <div class="container mt-4">
+        <div class="row">
+          <!-- Left column: Post -->
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+              <div class="card-body d-flex align-items-center">
+                <img src="https://farmlovers.org/blobs/thumbnails/0066d959-f88b-4f20-a927-986ddbdcdb09.jpg" alt="profile" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+                <div>
+                  <strong style="color: green;">Anschauhan added a post</strong><br>
+                  <small><i class="bi bi-clock"></i> 2025-07-17 06:34:17</small>
+                </div>
+              </div>
+              <img src="https://farmlovers.org/blobs/stickies/7388087a-f37c-41e3-9472-4d026cf6a9db.jpg" class="card-img-top" alt="Post image">
+              <div class="card-body">
+                <p class="card-text">Lap of Himalayan organic apple</p>
+              </div>
+              <div class="card-footer text-muted">
+                <i class="bi bi-heart"></i> Like (1)
+              </div>
+            </div>
+          </div>
+      
+          <!-- Right column: List + Image -->
+          <div class="col-md-4">
+           
+            <!-- Image with Caption -->
+            <div class="mt-4">
+              <img style="width: 100%;" src="https://farmlovers.org/img/bg/banner_famers_market.jpg" class="img-fluid rounded" alt="Fresh food">
+              <p class="mt-2 fw-bold text-white px-2 py-1" style="background-color: rgba(0,0,0,0.6); display: inline-block;">Fresh Food, Stronger Communities</p>
+            </div>
+          </div>
+
+
+          <!-- SAME CARDs-->
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+              <div class="card-body d-flex align-items-center">
+                <img src="https://farmlovers.org/blobs/thumbnails/0066d959-f88b-4f20-a927-986ddbdcdb09.jpg" alt="profile" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+                <div>
+                  <strong style="color: green;">Anschauhan added a post</strong><br>
+                  <small><i class="bi bi-clock"></i> 2025-07-17 06:34:17</small>
+                </div>
+              </div>
+              <img src="https://farmlovers.org/blobs/stickies/7388087a-f37c-41e3-9472-4d026cf6a9db.jpg" class="card-img-top" alt="Post image">
+              <div class="p-3">
+                <h6 class="fw-bold">Drim farm</h6>
+                <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Uganda - Central - Kampala</p>
+                <p><i class="bi bi-cart-fill me-2"></i> Watermelon</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <button class="btn btn-success btn-sm rounded-pill px-3">FULL PROFILE</button>
+                  <div>
+                    <i class="bi bi-heart me-2"></i>Like
+                    <span class="ms-3"><i class="bi bi-star me-1"></i>Rate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body d-flex align-items-center">
+            <img src="https://farmlovers.org/blobs/thumbnails/450e583b-95bc-4038-80f7-84cfebe24353.jpg" alt="profile" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+            <div>
+              <strong style="color: green;">Anschauhan added a post</strong><br>
+              <small><i class="bi bi-clock"></i> 2025-07-17 06:34:17</small>
+            </div>
+          </div>
+          <img src="https://farmlovers.org/blobs/thumbnails/4b9ff52a-e649-4ddd-b298-cdb751718aee.jpg" class="card-img-top" alt="Post image">
+          <div class="p-3">
+            <h6 class="fw-bold">Goat Burger</h6>
+            <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Roscommon</p>
+            <p><i class="bi bi-cart-fill me-2"></i>Goat Burge</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <button class="btn btn-success btn-sm rounded-pill px-3">FULL PROFILE</button>
+              <div>
+                <i class="bi bi-heart me-2"></i>Like
+                <span class="ms-3"><i class="bi bi-star me-1"></i>Rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <img src="https://farmlovers.org/blobs/thumbnails/450e583b-95bc-4038-80f7-84cfebe24353.jpg" alt="profile" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+          <div>
+            <strong style="color: green;">Anschauhan added a post</strong><br>
+            <small><i class="bi bi-clock"></i> 2025-07-17 06:34:17</small>
+          </div>
+        </div>
+        <img src="https://farmlovers.org/blobs/thumbnails/450e583b-95bc-4038-80f7-84cfebe24353.jpg" class="card-img-top" alt="Post image">
+        <div class="p-3">
+          <h6 class="fw-bold">Irish Goat Meat</h6>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Ireland - County Roscommon </p>
+          <p><i class="bi bi-cart-fill me-2"></i> 
+            Goat meat in different forms</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-success btn-sm rounded-pill px-3">FULL PROFILE</button>
+            <div>
+              <i class="bi bi-heart me-2"></i>Like
+              <span class="ms-3"><i class="bi bi-star me-1"></i>Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <img src="https://farmlovers.org/blobs/thumbnails/dbd1b427-e1bc-4121-9a77-f4480581ce22.jpg" alt="profile" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+          <div>
+            <strong style="color: green;">Anschauhan added a post</strong><br>
+            <small><i class="bi bi-clock"></i> 2025-07-17 06:34:17</small>
+          </div>
+        </div>
+        <img src="https://farmlovers.org/blobs/thumbnails/dbd1b427-e1bc-4121-9a77-f4480581ce22.jpg" class="card-img-top" alt="Post image">
+        <div class="p-3">
+          <h6 class="fw-bold">Eli Bangan</h6>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> India - Meghalaya - Resubelpara </p>
+          <p><i class="bi bi-cart-fill me-2"></i>  pineapple beetel nut</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-success btn-sm rounded-pill px-3">FULL PROFILE</button>
+            <div>
+              <i class="bi bi-heart me-2"></i>Like
+              <span class="ms-3"><i class="bi bi-star me-1"></i>Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <img src=" https://farmlovers.org/img/supplier_no_photo.png" alt="profile" class="rounded-circle me-2" style="width: 40px; height: 10px;">
+          <div>
+            <strong style="color: green;">Anschauhan added a post</strong><br>
+            <small><i class="bi bi-clock"></i> 2025-07-17 06:34:17</small>
+          </div>
+        </div>
+        <img src=" https://farmlovers.org/img/supplier_no_photo.png" class="card-img-top" alt="Post image" style="width: 98%; height: 500px;">
+        <div class="p-3">
+          <h6 class="fw-bold">Eli Bangan</h6>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> India - Meghalaya - Resubelpara </p>
+          <p><i class="bi bi-cart-fill me-2"></i>  pineapple beetel nut</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-success btn-sm rounded-pill px-3">FULL PROFILE</button>
+            <div>
+              <i class="bi bi-heart me-2"></i>Like
+              <span class="ms-3"><i class="bi bi-star me-1"></i>Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <img src="https://farmlovers.org/blobs/thumbnails/450e583b-95bc-4038-80f7-84cfebe24353.jpg" alt="profile" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+          <div>
+            <strong style="color: green;">Anschauhan added a post</strong><br>
+            <small><i class="bi bi-clock"></i> 2025-07-17 06:34:17</small>
+          </div>
+        </div>
+        <img src="https://farmlovers.org/blobs/thumbnails/883a7d73-a0ca-4905-b067-0312e7c0ea53.jpg" class="card-img-top" alt="Post image" style="width: 100%; height: 700px;">
+        <div class="p-3">
+          <h6 class="fw-bold">Boer Goat meat Boxes</h6>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Roscommon (Ireland) </p>
+          <p><i class="bi bi-cart-fill me-2"></i>  3rd party delivery</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-success btn-sm rounded-pill px-3">FULL PROFILE</button>
+            <div>
+              <i class="bi bi-heart me-2"></i>Like
+              <span class="ms-3"><i class="bi bi-star me-1"></i>Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-4">
+        <h4 style="font-size:17px;">
+          <i style="font-size:17px;" class="bi bi-chat-dots-fill "></i>Comment
+        </h4>
+        <form class="d-flex gap-2">
+          <input  type="text" class="form-control" placeholder="Write your comment here...">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+   
+
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <img src=" https://farmlovers.org/blobs/thumbnails/1bc8d222-5152-48d4-b30f-9c250d2df815.jpg" alt="profile" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+          <div>
+            <strong style="color: green;">Anschauhan added a post</strong><br>
+            <small><i class="bi bi-clock"></i> 2025-07-17 06:34:17</small>
+          </div>
+        </div>
+        <img src=" https://farmlovers.org/blobs/thumbnails/1bc8d222-5152-48d4-b30f-9c250d2df815.jpg" class="card-img-top" alt="Post image">
+        <div class="p-3">
+          <h6 class="fw-bold">Sawanji agro farm</h6>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> India - Maharashtra - Mangalwedha </p>
+          <p><i class="bi bi-cart-fill me-2"></i>  Zukuni, papai</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-success btn-sm rounded-pill px-3">FULL PROFILE</button>
+            <div>
+              <i class="bi bi-heart me-2"></i>Like
+              <span class="ms-3"><i class="bi bi-star me-1"></i>Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-4">
+        <h4 style="font-size:17px;">
+          <i style="font-size:17px;" class="bi bi-chat-dots-fill "></i>Comment
+        </h4>
+        <form class="d-flex gap-2">
+          <input  type="text" class="form-control" placeholder="Write your comment here...">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+    
+
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <img src="https://farmlovers.org/blobs/thumbnails/e274f563-91b2-4e39-8d94-950b31a04f74.jpg" alt="profile" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+          <div>
+            <strong style="color: green;">Anschauhan added a post</strong><br>
+            <small><i class="bi bi-clock"></i> 2025-07-17 06:34:17</small>
+          </div>
+        </div>
+        <img src="https://farmlovers.org/blobs/thumbnails/e274f563-91b2-4e39-8d94-950b31a04f74.jpg" class="card-img-top" alt="Post image">
+        <div class="p-3">
+          <h6 class="fw-bold">LEGACY FARMS</h6>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i>  Ghana - Kintampo - Pru West </p>
+          <p><i class="bi bi-cart-fill me-2"></i> Maize</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-success btn-sm rounded-pill px-3">FULL PROFILE</button>
+            <div>
+              <i class="bi bi-heart me-2"></i>Like
+              <span class="ms-3"><i class="bi bi-star me-1"></i>Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-4">
+        <h4 style="font-size:17px;">
+          <i style="font-size:17px;" class="bi bi-chat-dots-fill "></i>Comment
+        </h4>
+        <form class="d-flex gap-2">
+          <input  type="text" class="form-control" placeholder="Write your comment here...">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    
+    
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <img src="https://farmlovers.org/blobs/thumbnails/6a2d4dfb-05a6-4462-a9fe-ebf57a79195e.jpg" alt="profile" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+          <div>
+            <strong style="color: green;">Anschauhan added a post</strong><br>
+            <small><i class="bi bi-clock"></i> 2025-07-17 06:34:17</small>
+          </div>
+        </div>
+        <img src="https://farmlovers.org/blobs/thumbnails/6a2d4dfb-05a6-4462-a9fe-ebf57a79195e.jpg" class="card-img-top" alt="Post image">
+        <div class="p-3">
+          <h6 class="fw-bold">Pixie oranges
+           
+            </h6>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Nairobi (Kenya) </p>
+          <p><i class="bi bi-cart-fill me-2"></i>  At the farm (stall / shop), Delivery by the farmer, 3rd party delivery</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-success btn-sm rounded-pill px-3">FULL PROFILE</button>
+            <div>
+              <i class="bi bi-heart me-2"></i>Like
+              <span class="ms-3"><i class="bi bi-star me-1"></i>Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-4">
+        <h4 style="font-size:17px;">
+          <i style="font-size:17px;" class="bi bi-chat-dots-fill "></i>Comment
+        </h4>
+        <form class="d-flex gap-2">
+          <input  type="text" class="form-control" placeholder="Write your comment here...">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <img src="https://farmlovers.org/img/supplier_no_photo.png" alt="profile" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+          <div>
+            <strong style="color: green;">Anschauhan added a post</strong><br>
+            <small><i class="bi bi-clock"></i> 2025-07-17 06:34:17</small>
+          </div>
+        </div>
+        <img src="https://farmlovers.org/img/supplier_no_photo.png" style="width: 95%; height: 450px;"  class="card-img-top" alt="Post image">
+        <div class="p-3">
+          <h6 class="fw-bold">Pixie oranges
+           
+            </h6>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Nairobi (Kenya) </p>
+          <p><i class="bi bi-cart-fill me-2"></i>  At the farm (stall / shop), Delivery by the farmer, 3rd party delivery</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-success btn-sm rounded-pill px-3">FULL PROFILE</button>
+            <div>
+              <i class="bi bi-heart me-2"></i>Like
+              <span class="ms-3"><i class="bi bi-star me-1"></i>Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-4">
+        <h4 style="font-size:17px;">
+          <i style="font-size:17px;" class="bi bi-chat-dots-fill "></i>Comment
+        </h4>
+        <form class="d-flex gap-2">
+          <input  type="text" class="form-control" placeholder="Write your comment here...">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <img src="https://farmlovers.org/img/supplier_no_photo.png" alt="profile" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+          <div>
+            <strong style="color: green;">Anschauhan added a post</strong><br>
+            <small><i class="bi bi-clock"></i> 2025-07-17 06:34:17</small>
+          </div>
+        </div>
+        <img src="https://farmlovers.org/img/supplier_no_photo.png" style="width: 95%; height: 450px;"  class="card-img-top" alt="Post image">
+        <div class="p-3">
+          <h6 class="fw-bold">Pixie oranges
+           
+            </h6>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Nairobi (Kenya) </p>
+          <p><i class="bi bi-cart-fill me-2"></i>  At the farm (stall / shop), Delivery by the farmer, 3rd party delivery</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-success btn-sm rounded-pill px-3">FULL PROFILE</button>
+            <div>
+              <i class="bi bi-heart me-2"></i>Like
+              <span class="ms-3"><i class="bi bi-star me-1"></i>Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container mt-4">
+      <h4 style="font-size:17px;">
+        <i style="font-size:17px;" class="bi bi-chat-dots-fill "></i>Comment
+      </h4>
+      <form class="d-flex gap-2">
+        <input style="width:43%;" type="text" class="form-control" placeholder="Write your comment here...">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+
+
+    <div class="container my-5">
+      <div class="bg-light p-5 rounded-4 shadow text-center">
+        <h2 class="fw-bold mb-4">DON’T BE LEFT BEHIND! SIGN UP NOW</h2>
+    
+        <!-- Google Button -->
+        <button class="btn btn-light border d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 250px;">
+          <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" style="width:20px; margin-right:10px;">
+          Continue with Google
+        </button>
+    
+        <p class="fw-bold">- OR -</p>
+    
+        <!-- Email Button -->
+        <button class="btn btn-success px-4 py-2 rounded-pill">EMAIL LOGIN</button>
+      </div>
+    </div>
+
+  </section>
+
+  
+  
+  
+  
+  <!-- Footer Section -->
+<footer style="background-color: #4f9f48;" class=" text-white py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Column 1 -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Farmlovers</h5> </br>
+        <p>Farmlovers' vision is to become the world's leading food ecosystem, seamlessly connecting every smallholder farmer with every consumer around the world through innovative logistics, predictive technology and a thriving community network. Find out more.</p>
+        <div class="d-flex gap-3">
+          <i class="bi bi-instagram fs-4"></i>
+          <i class="bi bi-camera-video fs-4"></i>
+          <i class="bi bi-facebook fs-4"></i>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-md-2 mb-4">
+        <h5 class="fw-bold">About</h5></br>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">About Farmlovers</a></li></br>
+          <li><a href="#" class="text-white text-decoration-none">Terms of Use</a></li></br>
+          <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li></br>
+          <li><a href="#" class="text-white text-decoration-none">Contacts</a></li></br>
+          <li><a href="#" class="text-white text-decoration-none">How to Sell Farm Products Online?</a></li></br>
+          <li><a href="#" class="text-white text-decoration-none">Farmers Join</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="col-md-3 mb-4">
+        <h5 class="fw-bold">Resources</h5></br>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Farm-to-Table Communities</a></li></br>
+          <li><a href="#" class="text-white text-decoration-none">Fresh Food Suppliers</a></li></br>
+          <li><a href="#" class="text-white text-decoration-none">Marketplace</a></li></br>
+          <li><a href="#" class="text-white text-decoration-none">Farmers Markets</a></li></br>
+          <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="col-md-3 mb-4 text-center">
+        <h5 class="fw-bold">What can Farmlovers do for you?</h5></br>
+        <button class="btn btn-dark mt-3 px-4 py-2 rounded-pill">TELL US YOUR OPINION</button>
+      </div>
+      <p style="text-align: center;">© 2025 All rights reserved Farmlovers</p>
+    </div>
+  </div>
+</footer>
+
+  
+
+  
+  
+  
+  
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</body>
+</html>
